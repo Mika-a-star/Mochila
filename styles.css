@@ -1,0 +1,72 @@
+body {
+        background-image: url();
+        background-size: cover;
+        background-repeat: repeat;
+}
+
+
+header {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #70ff638e;
+    text-shadow: 3px 3px 5px #050000;
+        font-size: 40px;
+    
+        
+    
+}
+@keyframes animarFundo {
+
+
+}
+
+body {
+    background-image: url('https://i.pinimg.com/originals/18/4d/9d/184d9deff2f1ddf83afe1a02ab5560dd.gif'); /* Uma imagem grande */
+    animation: animarFundo 10s linear infinite;
+    background-attachment: fixed; /* Mantém o fundo fixo */
+    background-size:cover;
+    background-position: bottom left;
+
+}
+.titulo-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto com transparência */
+    padding: 10px 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    display: inline-block;
+    color: rgb(141, 91, 91); /* Cor do texto */
+    text-align: center;
+}
+
+
+
