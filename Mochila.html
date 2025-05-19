@@ -1,20 +1,161 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
+    <title>Mochila Virtual</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #ffffff;
-        }
-
-        .container {
-            margin-top: 50px;
+            margin: 20px;
             padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0,)
+            background-color: #f4f4f4;
         }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .materia {
+            margin-bottom: 10px;
+        }
+        .titulo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .titulo:hover{
+            transform: scale(1.05);
+        }
+        h2 {
+            margin: 0;
+        }
+        .botao {
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .conteudo {
+            padding: 10px;
+            background: #ddd;
+            border-radius: 5px;
+            display: none;
+            transition: transform 0.2s ease-in-out;
+        }
+        .conteudo:hover{
+            transform: scale(1.02)
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Mochila Virtual</h1>
+
+    <div class="materia">
+        <div class="titulo">
+            <h2>POO-JAVA</h2>
+            <button class="botao" onclick="toggleConteudo(this)">↓</button>
+        </div>
+        <div class="conteudo">
+            <p>Aqui você pode adicionar seus conteúdos de Matemática.</p>
+        </div>
+    </div>
+
+    <div class="materia">
+        <div class="titulo">
+            <h2>AMC</h2>
+            <button class="botao" onclick="toggleConteudo(this)">↓</button>
+        </div>
+        <div class="conteudo">
+            <p>Aqui você pode adicionar seus conteúdos de Português.</p>
+        </div>
+    </div>
+
+    <div class="materia">
+        <div class="titulo">
+            <h2>HTML and CSS</h2>
+            <button class="botao" onclick="toggleConteudo(this)">↓</button>
+        </div>
+        <div class="conteudo">
+            <p>Aqui você pode adicionar seus conteúdos de História.</p>
+        </div>
+    </div>
+
+    <div class="materia">
+        <div class="titulo">
+            <h2>S.O</h2>
+            <button class="botao" onclick="toggleConteudo(this)">↓</button>
+        </div>
+        <div class="conteudo">
+            <p>Aqui você pode adicionar seus conteúdos de Ciências.</p>
+        </div>
+    </div>
+
+    <div class="materia">
+        <div class="titulo">
+            <h2>LOGPR</h2>
+            <button class="botao" onclick="toggleConteudo(this)">↓</button>
+        </div>
+        <div class="conteudo">
+            <p>Aqui você pode adicionar seus conteúdos.</p>
+        </div>
+    </div>
+
+    <div class="materia">
+        <div class="titulo">
+            <h2>NR</h2>
+            <button class="botao" onclick="toggleConteudo(this)">↓</button>
+        </div>
+        <div class="conteudo">
+            <p>Aqui você pode adicionar seus conteúdos.</p>
+        </div>
+    </div>
+
+    <div class="materia">
+        <div class="titulo">
+            <h2>GT</h2>
+            <button class="botao" onclick="toggleConteudo(this)">↓</button>
+        </div>
+        <div class="conteudo">
+            <p>Aqui você pode adicionar seus conteúdos.</p>
+        </div>
+    </div>
+
+    <div class="materia">
+        <div class="titulo">
+            <h2>PROWEB</h2>
+            <button class="botao" onclick="toggleConteudo(this)">↓</button>
+        </div>
+        <div class="conteudo">
+            <p>Aqui você pode adicionar seus conteúdos.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleConteudo(botao) {
+        let conteudo = botao.parentElement.parentElement.querySelector(".conteudo");
+        if (conteudo.style.display === "none") {
+            conteudo.style.display = "block";
+            botao.textContent = "↑"; // Muda o botão para seta para cima
+        } else {
+            conteudo.style.display = "none";
+            botao.textContent = "↓"; // Muda o botão para seta para baixo
+        }
+    }
+</script>
+
+</body>
+</html>
