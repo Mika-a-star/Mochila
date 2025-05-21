@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mochila Virtual</title>
     <style>
+        /* Tema Claro */
         body {
+            background-image: url(https://i.pinimg.com/originals/09/01/43/0901434384290893f3f67b1065855d60.gif);
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #ffffff;
+            transition: background-image 0.3s, color 0.3s;
+            background-size:cover;
         }
         .container {
             max-width: 800px;
             margin: auto;
-            background: white;
+            background: rgb(255, 255, 255);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
         }
         .materia {
             margin-bottom: 10px;
@@ -30,9 +35,9 @@
             color: white;
             padding: 10px;
             border-radius: 5px;
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.2s ease-in-out, background-color 0.3s;
         }
-        .titulo:hover{
+        .titulo:hover {
             transform: scale(1.05);
         }
         h2 {
@@ -45,21 +50,57 @@
             font-size: 16px;
             cursor: pointer;
         }
+        .botao-tema {
+            padding: 10px;
+            margin: 5px;
+            background-color: #22222200;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .botao-tema-escuro {
+            background-color: #22222200;
+        }
+
+        /* Tema Escuro */
+        .dark-mode {
+           background-image: url(https://i.pinimg.com/originals/fe/e9/55/fee955a4c443424dd55cf8239698291f.gif); /* Modo Escuro */
+            color: white;
+        }
+        .dark-mode .container {
+            background: #333;
+        }
+        .dark-mode .titulo {
+            background-color: #555;
+        }
+        .dark-mode .conteudo {
+            background-color: #444;
+            color: white;
+        }
+        .dark-mode .botao {
+            color: white;
+        }
+
         .conteudo {
             padding: 10px;
             background: #ddd;
             border-radius: 5px;
             display: none;
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.2s ease-in-out, background-color 0.3s;
         }
-        .conteudo:hover{
-            transform: scale(1.02)
+        .conteudo:hover {
+            transform: scale(1.02);
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <button class="botao-tema" onclick="modoClaro()">☀️</button>
+    <button class="botao-tema botao-tema-escuro" onclick="modoEscuro()">🌑</button>
+
     <h1>Mochila Virtual</h1>
 
     <div class="materia">
@@ -114,11 +155,30 @@
 
     <div class="materia">
         <div class="titulo">
-            <h2>NR</h2>
+            <h2>NR - Noção de Robótica</h2>
             <button class="botao" onclick="toggleConteudo(this)">↓</button>
         </div>
         <div class="conteudo">
-            <p>Aqui você pode adicionar seus conteúdos.</p>
+            <h3>NOÇÃO DE ROBÓTICA</h3>
+            <p><strong>Data:</strong>23/03/2025</p>
+            <h3>Diferença Entre Robô e Autômato</h3>
+
+        <h4>Autômato</h4>
+        <p><strong>Definição:</strong> Um dispositivo mecânico projetado para executar uma sequência de movimentos ou tarefas de forma repetitiva e geralmente pré-determinada.</p>
+        <p><strong>Exemplo:</strong> Relógios antigos com figuras móveis, bonecos mecânicos do século XVIII, ou brinquedos que fazem movimentos simples.</p>
+        <ul>
+            <li>Movimentos programados mecanicamente (engrenagens, molas, alavancas).</li>
+            <li>Não tem inteligência ou adaptação ao ambiente.</li>
+            <li>Pode ser puramente mecânico, sem eletrônica ou sensores.</li>
+        </ul>
+
+        <h4>Robô</h4>
+        <p><strong>Definição:</strong> Um sistema mecânico e eletrônico que pode ser programado para realizar diversas tarefas de forma autônoma ou semi-autônoma.</p>
+        <p><strong>Exemplo:</strong> Braços robóticos industriais, robôs aspiradores (como Roomba), robôs humanoides (como Sophia).</p>
+        <ul>
+            <li>Possui sensores para interagir com o ambiente.</li>
+            <li>Pode ter inteligência artificial e aprender com experiências.</li>
+            <li>Funciona com eletrônica, software e, às vezes, inteligência computacional.</li>
         </div>
     </div>
 
@@ -145,6 +205,14 @@
 </div>
 
 <script>
+    function modoClaro() {
+        document.body.classList.remove("dark-mode");
+    }
+
+    function modoEscuro() {
+        document.body.classList.add("dark-mode");
+    }
+
     function toggleConteudo(botao) {
         let conteudo = botao.parentElement.parentElement.querySelector(".conteudo");
         if (conteudo.style.display === "none") {
