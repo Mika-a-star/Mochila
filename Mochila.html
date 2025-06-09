@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Mochila Virtual</title>
     <style>
-
-        /* Tema Claro */
+       /* Tema Claro */
         body {
             background-image: url(https://i.pinimg.com/originals/09/01/43/0901434384290893f3f67b1065855d60.gif);
             font-family: Arial, sans-serif;
@@ -115,6 +114,7 @@
             background-color: rgba(51, 20, 100, 0.603);
             color: white;
         }
+       
     </style>
 </head>
 <body>
@@ -124,12 +124,11 @@
     <button class="botao-tema botao-tema-escuro" onclick="modoEscuro()">🌑</button>
     <button class="botao-tema" onclick="modoGalaxia()">✨</button>
 
-<h1 class="titulo-box">Mochila Virtual</h1>
+    <h1 class="titulo-box">Mochila Virtual</h1>
 
     <div class="materia">
-        <div class="titulo">
+        <div class="titulo" onclick="toggleConteudo(this)">
             <h2>POO-JAVA</h2>
-            <button class="botao" onclick="toggleConteudo(this)">↓</button>
         </div>
         <div class="conteudo">
             <p>Nada aqui...</p>
@@ -137,9 +136,8 @@
     </div>
 
     <div class="materia">
-        <div class="titulo">
+        <div class="titulo" onclick="toggleConteudo(this)">
             <h2>AMC</h2>
-            <button class="botao" onclick="toggleConteudo(this)">↓</button>
         </div>
         <div class="conteudo">
              <h3>O que é Memória RAM?</h3>
@@ -208,19 +206,42 @@
     </div>
 
     <div class="materia">
-        <div class="titulo">
+        <div class="titulo" onclick="toggleConteudo(this)">
             <h2>HTML and CSS</h2>
-            <button class="botao" onclick="toggleConteudo(this)">↓</button>
         </div>
         <div class="conteudo">
-            <p>Nada aqui...</p>
+            <p>O CSS (Cascading Style Sheets) nessa pagina é utilizada para definir a aparência e o layout da página.</p>
+
+        <h3> Definição de temas</h3>
+        <p>O código utiliza classes para definir três diferentes temas visuais:</p>
+        <ul>
+            <li><strong>Modo claro:</strong> Usa uma imagem de fundo clara e cores suaves.</li>
+            <li><strong>Modo escuro:</strong> Troca o fundo por uma imagem mais escura e ajusta os tons dos elementos.</li>
+            <li><strong>Modo galáxia:</strong> Aplica um fundo estrelado e esquemas de cores mais vibrantes.</li>
+        </ul>
+
+        <h3> Estilização do layout</h3>
+        <ul>
+            <li>Define margens, espaçamento interno (padding), fontes e tamanhos dos elementos.</li>
+            <li>Aplica estilos ao .container para centralizar e estruturar melhor o conteúdo.</li>
+        </ul>
+
+        <h3> Interação visual</h3>
+        <ul>
+            <li>Usa transition para suavizar mudanças de cor e escala nos elementos.</li>
+            <li>Aplica hover para dar efeitos ao passar o mouse, como aumentar levemente o tamanho do título.</li>
+        </ul>
+
+        <h3> Ocultação e exibição de conteúdo</h3>
+        <ul>
+            <li>A classe .conteudo tem display: none; o que significa que os elementos começam ocultos.</li>
+            <li>Quando ativados, a classe permite que o conteúdo seja exibido com um efeito suave.</li>
         </div>
     </div>
 
     <div class="materia">
-        <div class="titulo">
+        <div class="titulo" onclick="toggleConteudo(this)">
             <h2>S.O</h2>
-            <button class="botao" onclick="toggleConteudo(this)">↓</button>
         </div>
         <div class="conteudo">
             <p>Nada aqui...</p>
@@ -228,19 +249,16 @@
     </div>
 
     <div class="materia">
-        <div class="titulo">
+        <div class="titulo" onclick="toggleConteudo(this)">
             <h2>LOGPR</h2>
-            <button class="botao" onclick="toggleConteudo(this)">↓</button>
         </div>
         <div class="conteudo">
             <p>Nada aqui...</p>
         </div>
     </div>
-
     <div class="materia">
-        <div class="titulo">
+        <div class="titulo"class="titulo" onclick="toggleConteudo(this)">
             <h2>NR - Noção de Robótica</h2>
-            <button class="botao" onclick="toggleConteudo(this)">↓</button>
         </div>
         <div class="conteudo">
              <h3>NOÇÃO DE ROBÓTICA</h3>
@@ -266,11 +284,32 @@
             <li>Funciona com eletrônica, software e, às vezes, inteligência computacional.</li>
         </div>
     </div>
+ <div class="materia">
+        <div class="titulo"class="titulo" onclick="toggleConteudo(this)">
+            <h2>PROWEB</h2>
+        </div>
+        <div class="conteudo">
+        
+        <h4>Base da Tecnologia Moderna</h4>
+        
+        <p>Quase tudo que usamos hoje depende da web: redes sociais bancários, plataformas de ensino, entre, e-commerce, sistemas bancários, plataformas de ensino, entre outros. Sem programação web, muitos desses outros. Sem programação web, muitos desses serviços simplesmente não existiriam.</p>
 
+        <h4>Interatividade e Experiência do e Experiência do Usuário</h4>
+        <p>Sites dinâmicos permitem interações login, compras online e personalização de conteúdo. Isso avançadas, como login, compras online e personalização de conteúdo. Isso melhora a experiência melhora a experiência do usuário e torna a web mais intuit do usuário e torna a web mais intuitiva.</p>
+
+        <h4>Oportunidade de Trabalho</h4>
+        <p>Denvolvedores web estão entre os profissionais mais procurados. Com habilidades de programação web, é possível trabalhar remotamente, construir aplicações inovadoras e até empre, é possível trabalhar remotamente, construir aplicações inovadoras e até empreender.</p>
+
+        <h4>Segurança Digital</h4>
+        <p>A programação web ajuda na proteção de dados, garantindo que informações sensíveis sejam transmitidas e armazenadas de forma segura que informações sensíveis sejam transmitidas e armazenadas de forma segura, evitando ataques hackers e vazamentos de dados.</p>
+
+        <h4>Automação e Inovação</h4>
+        <p>Com programação web, empresas podem automatizar processos, facilitar atendimento ao cliente e criar ferramentas para melhorar eficiênciaação e Inovação</h4>
+        </div>
+    </div>
     <div class="materia">
-        <div class="titulo">
+        <div class="titulo"class="titulo" onclick="toggleConteudo(this)">
             <h2>GT</h2>
-            <button class="botao" onclick="toggleConteudo(this)">↓</button>
         </div>
         <div class="conteudo">
            <div class="materia">
@@ -295,42 +334,10 @@
             <li><strong>Menor latência:</strong> Respostas mais rápidas.</li>
             <li><strong>Maior eficiência:</strong> Melhor experiência para clientes.</li>
             <li><strong>Conectividade otimizada:</strong> Menos perdas na transmissão de dados.</li>
-        </ul>
-    </div>
 </div>
-
-    </div>
-
-    <div class="materia">
-        <div class="titulo">
-            <h2>PROWEB</h2>
-            <button class="botao" onclick="toggleConteudo(this)">↓</button>
-        </div>
-        <div class="conteudo">
-        
-        <h4>Base da Tecnologia Moderna</h4>
-        
-        <p>Quase tudo que usamos hoje depende da web: redes sociais bancários, plataformas de ensino, entre, e-commerce, sistemas bancários, plataformas de ensino, entre outros. Sem programação web, muitos desses outros. Sem programação web, muitos desses serviços simplesmente não existiriam.</p>
-
-        <h4>Interatividade e Experiência do e Experiência do Usuário</h4>
-        <p>Sites dinâmicos permitem interações login, compras online e personalização de conteúdo. Isso avançadas, como login, compras online e personalização de conteúdo. Isso melhora a experiência melhora a experiência do usuário e torna a web mais intuit do usuário e torna a web mais intuitiva.</p>
-
-        <h4>Oportunidade de Trabalho</h4>
-        <p>Denvolvedores web estão entre os profissionais mais procurados. Com habilidades de programação web, é possível trabalhar remotamente, construir aplicações inovadoras e até empre, é possível trabalhar remotamente, construir aplicações inovadoras e até empreender.</p>
-
-        <h4>Segurança Digital</h4>
-        <p>A programação web ajuda na proteção de dados, garantindo que informações sensíveis sejam transmitidas e armazenadas de forma segura que informações sensíveis sejam transmitidas e armazenadas de forma segura, evitando ataques hackers e vazamentos de dados.</p>
-
-        <h4>Automação e Inovação</h4>
-        <p>Com programação web, empresas podem automatizar processos, facilitar atendimento ao cliente e criar ferramentas para melhorar eficiênciaação e Inovação</h4>
-        </div>
-    </div>
-
-</div>
-<div id="imagem-transicao"></div>
 
 <script>
-     function modoClaro() {
+    function modoClaro() {
         document.body.classList.remove("dark-mode", "galaxy-mode");
     }
 
@@ -344,10 +351,9 @@
         document.body.classList.add("galaxy-mode");
     }
 
-    function toggleConteudo(botao) {
-        let conteudo = botao.parentElement.parentElement.querySelector(".conteudo");
+    function toggleConteudo(titulo) {
+        let conteudo = titulo.nextElementSibling;
         conteudo.style.display = conteudo.style.display === "none" ? "block" : "none";
-        botao.textContent = conteudo.style.display === "none" ? "↓" : "↑";
     }
 </script>
 
