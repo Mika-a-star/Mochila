@@ -99,13 +99,17 @@
         .conteudo:hover {
             transform: scale(1.02);
         }
+        
+        .conteudo.ativo {
+        display: block;
+    }
 /* Tema Galáxia */
         .galaxy-mode {
             background-image: url(https://i.pinimg.com/originals/aa/95/5e/aa955e4d89e68f427e2eb868f88de189.gif);
             background-attachment: fixed;
         }
         .galaxy-mode .container {
-            background: rgba(30, 0, 60, 0.61);
+            background: rgba(19, 1, 36, 0.61);
         }
         .galaxy-mode .titulo {
             background-color: rgba(90, 40, 160, 0.623);
@@ -122,7 +126,7 @@
 <div class="container">
     <button class="botao-tema" onclick="modoClaro()">☀️</button>
     <button class="botao-tema botao-tema-escuro" onclick="modoEscuro()">🌑</button>
-    <button class="botao-tema" onclick="modoGalaxia()">✨</button>
+    <button class="botao-tema" onclick="modoGalaxia()">🌀</button>
 
     <h1 class="titulo-box">Mochila Virtual</h1>
 
@@ -351,10 +355,21 @@
         document.body.classList.add("galaxy-mode");
     }
 
-    function toggleConteudo(titulo) {
+  function toggleConteudo(titulo) {
         let conteudo = titulo.nextElementSibling;
-        conteudo.style.display = conteudo.style.display === "none" ? "block" : "none";
-    }
+        
+        // Se o conteúdo já estiver aberto, fecha ele
+        if (conteudo.classList.contains("ativo")) {
+            conteudo.classList.remove("ativo");
+        } else {
+            // Fecha todos os outros conteúdos antes de abrir o novo
+            let todosConteudos = document.querySelectorAll(".conteudo");
+            todosConteudos.forEach(c => c.classList.remove("ativo"));
+            
+            // Abre o conteúdo clicado
+            conteudo.classList.add("ativo");
+        }
+  }
 </script>
 
 </body>
