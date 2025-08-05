@@ -530,6 +530,23 @@
     conteudo.classList.add("ativo");
   }
 }
+function toggleConteudo2(titulo2) {
+  // Pega o container do conteúdo da matéria atual
+  let conteudoPai = titulo2.parentElement;
+
+  // Fecha todos os outros bimestres dentro da mesma matéria
+  let todosBimestres = conteudoPai.querySelectorAll(".conteudo2.ativo");
+  todosBimestres.forEach(div => {
+    div.classList.remove("ativo");
+  });
+
+  // Abre o bimestre clicado
+  let conteudo2 = titulo2.nextElementSibling;
+  if (conteudo2 && conteudo2.classList.contains("conteudo2")) {
+    conteudo2.classList.add("ativo");
+  }
+}
+
 
 </script>
 
