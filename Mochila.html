@@ -516,6 +516,21 @@
       aulas.style.display = aulas.style.display === "none" ? "block" : "none";
     }
   }
+
+  function toggleConteudo(titulo) {
+  // Fecha todos os outros conteúdos
+  let todasAsDivs = document.querySelectorAll(".conteudo.ativo");
+  todasAsDivs.forEach(div => {
+    div.classList.remove("ativo");
+  });
+
+  // Abre o conteúdo da matéria clicada
+  let conteudo = titulo.nextElementSibling;
+  if (conteudo && conteudo.classList.contains("conteudo")) {
+    conteudo.classList.add("ativo");
+  }
+}
+
 </script>
 
 </body>
