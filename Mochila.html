@@ -546,6 +546,37 @@ function toggleConteudo2(titulo2) {
     conteudo2.classList.add("ativo");
   }
 }
+function toggleConteudo(titulo) {
+  let conteudo = titulo.nextElementSibling;
+  let estaAtivo = conteudo.classList.contains("ativo");
+
+  // Fecha todos os conteúdos primeiro
+  document.querySelectorAll(".conteudo.ativo").forEach(div => {
+    div.classList.remove("ativo");
+  });
+
+  // Se o conteúdo não estava ativo, abre ele
+  if (!estaAtivo) {
+    conteudo.classList.add("ativo");
+  }
+}
+function toggleConteudo2(titulo2) {
+  let conteudoPai = titulo2.parentElement;
+  let conteudo2 = titulo2.nextElementSibling;
+  let estaAtivo = conteudo2.classList.contains("ativo");
+
+  // Fecha todos os bimestres dentro da mesma matéria
+  conteudoPai.querySelectorAll(".conteudo2.ativo").forEach(div => {
+    div.classList.remove("ativo");
+  });
+
+  // Se o bimestre não estava ativo, abre ele
+  if (!estaAtivo) {
+    conteudo2.classList.add("ativo");
+  }
+}
+
+
 
 
 </script>
