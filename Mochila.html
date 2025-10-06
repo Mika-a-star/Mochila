@@ -82,7 +82,69 @@
       background-color: rgba(125, 159, 211, 0.534);
       color: white;
     }
+    
+    /* --- 🌐 Responsividade --- */
 
+/* Telas menores que 900px (tablets e celulares grandes) */
+@media (max-width: 900px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  .titulo {
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+/* Telas menores que 600px (celulares comuns) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .titulo {
+    font-size: 1.5em;
+  }
+
+  .botao-tema {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .conteudo, .conteudo2 {
+    font-size: 14px;
+  }
+
+  /* Se tiver GIF de fundo, suaviza */
+  body.galaxia {
+    background-size: cover;
+    background-position: center;
+  }
+}
+.botoes-tema {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+    
     .conteudo, .conteudo2 {
       padding: 10px;
       background: #ddddddc2;
